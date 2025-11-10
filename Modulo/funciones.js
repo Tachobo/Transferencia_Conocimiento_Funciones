@@ -1,4 +1,5 @@
 /*Funciones NOTA ESTUDIANTE*/
+
 /* Está funcion sirve para calcular el promedio de las 3 notas
 sumandolas y dividiendo ese resultado entre 3*/
 function calcularPromedio(n1, n2, n3,){
@@ -22,6 +23,7 @@ principal*/
 export {calcularPromedio, apruebaOreprueba};
 
 /*Funciones BANCO */
+
 /* Toca dejarlo fuera de la funcion, porque este es el que va a cambiar
 se va ir actualizando el saldo, a medida que el cliente interactua con el 
 programa*/ 
@@ -51,3 +53,29 @@ function consultarSaldo(){
     return saldo;
 }
 export { depositarDinero, retirarDinero, consultarSaldo};
+
+/* Función PRODUCTOS*/
+
+/*Aqui se calcula el subtotal por producto multiplicando el precio del producto
+, por la cantidad del mismo */
+function calcularSubtotal(precio, cantidad){
+    return precio * cantidad;
+}
+/*Aqui en esta funcion se calcula el subtotal total de todos los productos
+y se suman, subTotalActual es el subtotal que se lleva en ese momento y,
+el subtotal es el resultado del producto*/
+function sumaSubtotales(subtotalActual, subtotal){
+    return subtotalActual + subtotal;
+}
+
+/*Acá se calcula el iva, multiplicando el total sin el iva, con 0.19, ese totalsiniva 
+se nombra en el programa principal*/
+function calcularIva(totalSinIva){
+    return totalSinIva * 0.19;
+}
+
+/*Y ahora se hace la funcion para calcular el total con el iva incluido*/
+function calcularTotalConIva(totalSinIva, iva){
+    return totalSinIva + iva;
+}
+export {calcularSubtotal, sumaSubtotales, calcularIva, calcularTotalConIva};

@@ -3,4 +3,5 @@ posteriormente importarlas en el programa principal*/
 export { 
 calcularPromedio, apruebaOreprueba,
 depositarDinero, retirarDinero, consultarSaldo,
+calcularSubtotal, sumaSubtotales, calcularIva, calcularTotalConIva,
 } from "./funciones.js";
