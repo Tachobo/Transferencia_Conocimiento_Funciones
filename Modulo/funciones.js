@@ -79,3 +79,44 @@ function calcularTotalConIva(totalSinIva, iva){
     return totalSinIva + iva;
 }
 export {calcularSubtotal, sumaSubtotales, calcularIva, calcularTotalConIva};
+
+/*Funciones Analisis Numeros*/
+
+/*priemra funcion, determinamos si el numero es par o impar. en base a si al dividirlo
+por dos, deja residuo, o no, si deja residuo no es par, si no deja residuo, es par*/
+function esParImpar (numero){
+    if(numero % 2 === 0){
+        return "Es Par"
+    }
+    else{
+        return "Es Impar"
+    }
+}
+/*Segunda funcion, numero es positivo, o negativo*/
+function positivoNegativo(numero){
+    if (numero > 0){
+        return "es positivo";
+    }
+    else if (numero < 0){
+        return "es negativo";
+    }
+    else{
+        return "El cero es neutro, joven"
+    }
+}
+/*Tercera Funcion, para saber si el numero es primo o no, dado que, el numero 1
+no cuenta como primo y los negativos tampoco son primos, deben ser enteros positivos, 
+se debe empesar del 2 en adelante, */
+function esPrimo(numero){
+    if (numero <= 1){
+        return "No es primo";
+    }
+/*Si el numero tiene un divisor diferente al 1 y el mismo, no es primo*/
+    for (let i = 2; i < numero; i++){
+        if (numero % i ===0){
+            return "No es primo";
+        }
+    }
+    return "Es Primo";
+}
+export{ esParImpar, positivoNegativo, esPrimo};

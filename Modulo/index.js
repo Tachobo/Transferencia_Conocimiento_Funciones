@@ -4,4 +4,5 @@ export {
 calcularPromedio, apruebaOreprueba,
 depositarDinero, retirarDinero, consultarSaldo,
 calcularSubtotal, sumaSubtotales, calcularIva, calcularTotalConIva,
+esParImpar, positivoNegativo, esPrimo,
 } from "./funciones.js";
